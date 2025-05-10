@@ -1,0 +1,512 @@
+import java.util.*;
+public class Main{
+    public static void main(String[] arr){
+        int a,b,c;
+        Scanner scanner = new Scanner (System.in);
+        System.out.print("Give a number 1:");
+        a=scanner.nextInt();
+        System.out.print("give a number 2:");
+        b=scanner.nextInt();
+        System.out.print("sum of "+a+" & "+b+" is ");
+        System.out.print(a+b);
+}
+}
+
+
+
+
+
+
+
+*****************************************************************************************
+
+
+import java.util.*;
+public class Main{
+    public static void main(String[] arr){
+      Scanner sc=new Scanner(System.in);
+      int n=sc.nextInt();
+      int first_digit=n/100;
+      int second_digit=(n/10)%10;
+      int third_digit=n%10;
+      System.out.println(first_digit+second_digit+third_digit);
+      
+}
+}
+
+
+
+
+******************************************************************************************
+
+reverse digit code 
+
+
+import java.util.*;
+public class Main{
+    public static void main(String[] arr){
+      Scanner sc=new Scanner(System.in);
+      int n=sc.nextInt();
+      int first_digit=n/100;
+      int second_digit=(n/10)%10;
+      int third_digit=n%10;
+      System.out.println(third_digit+""+second_digit+""+first_digit);
+      
+}
+}
+
+
+
+
+*****************************************************************************************************
+
+ODD EVEN CODE 
+
+
+import java.util.*;
+public class Main{
+    public static void main(String[] arr){
+      Scanner sc=new Scanner(System.in);
+      int n=sc.nextInt();
+      
+      if(n>9){
+          System.out.println("invalid number");
+      }
+      else if(n==0){
+          System.out.println("zero");
+         
+      } 
+      else if (n%2==0){
+        System.out.println("even"); 
+      }
+      else{
+          System.out.println("odd");
+      }
+     
+}
+}
+
+
+*********************************************************************************************************
+
+weird not weird 
+
+import java.util.*;
+public class Main{
+    public static void main(String[] arr){
+      Scanner sc=new Scanner(System.in);
+      int n=sc.nextInt();
+      
+      if(n%2!=0&&n<21){
+          System.out.println("Weird");
+      }
+      else if(n%2==0&&n>1&&n<6){
+          System.out.println("not weird");
+         
+      } 
+      else if (n%2==0&&n>5&&n<21){
+        System.out.println("weird"); 
+      }
+      else if(n%2==0&&n<21){
+          System.out.println("not weird");
+      }
+      else{
+          System.out.println("not weird");
+      }
+     
+}
+}
+
+
+
+
+
+***********************************************************************************************************
+
+Trendy Number 
+
+import java.util.*;
+public class Main{
+    public static void main(String[] arr){
+
+      Scanner sc=new Scanner(System.in);
+      int n=sc.nextInt();
+      int s=(n/10)%10;
+      
+      if (n<100&&n==000){
+          System.out.println("invalid number");
+          
+      } 
+      else if (n>999){
+          System.out.println("invalid number");
+          
+      }
+     else if(s%3==0){
+     System.out.println("Trendy Number");
+     }
+     else{
+         System.out.println("Not a Trendy Number");
+     }
+}
+}
+
+
+
+
+
+************************************************************************************
+
+special numbers 
+
+
+import java.util.*;
+public class Main{
+public static void main(String[] arr){
+Scanner sc=new Scanner(System.in);
+int r;
+System.out.print("enter start number:");
+int f=sc.nextInt();
+System.out.print("enter end number:");
+int s=sc.nextInt();
+for(r=f;r<=s;r++){
+int m=r/10;
+int n=r%10;
+int l=m+n;
+int j=m*n;
+int i=l+j;
+if(i==r){
+System.out.println(r);
+}
+}
+}
+}  
+
+
+*********************************************************************************************************
+Fibonacci number
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] arr) {
+        Scanner sc = new Scanner(System.in);
+        int ms;
+        
+        System.out.print("Enter a month: ");
+        ms = sc.nextInt();
+        
+     
+        int f = 0; 
+        int s = 1;
+        
+        if (ms == 1) {
+            System.out.println(f);  
+        } else if (ms == 2) {
+            System.out.println(s);  
+        } else {
+           
+            int fs = f + s;
+            for (int m = 3; m <= ms; m++) {
+                f = s;
+                s = fs;
+                fs = f + s;
+            }
+            System.out.println(s);
+        }
+    }
+}
+****************************************************************************************************************
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] arr) {
+        Scanner sc = new Scanner(System.in);
+    
+        int n=sc.nextInt();
+        int c=0;
+        while(n!=1){
+            System.out.println(n+"->");
+            
+            if (n%2==0){
+                n=n/2;
+            } 
+            else{
+                n=3*n+1;
+            }
+            c++;
+        }
+        System.out.println(c);
+        
+    }
+}
+
+****************************************************************************************************************
+Kaprekar Number 
+
+
+ import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Enter a number:");
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        sc.close();
+
+        if (isKaprekar(n)) {
+            System.out.println(n + " is a adam number.");
+        } else {
+            System.out.println(n + " is a adam not number.");
+        }
+    }
+
+    public static boolean isKaprekar(int num) {
+        if (num == 1) return true;
+
+        int square = num * num;
+        int divisor = 1;
+
+        while (divisor < square) {
+            int right = square % divisor;
+            int left = square / divisor;
+
+            if (right > 0 && left + right == num) {
+                return true;
+            }
+
+            divisor *= 10;
+        }
+
+        return false;
+    }
+}
+
+
+***********************************************************************************************
+
+Kaprekar number 297 
+
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int count=0;
+        int temp=n;
+        int square=n*n;
+        while(n!=0){
+            n/=10;
+            count++;
+        }
+        int power=(int)Math.pow(10,count);
+        int left=square%power;
+        int right=square/power;
+        int sum=left+right;
+        if(sum==temp){
+            System.out.println("it is kaprekar number");
+        }
+        else{
+            System.out.println("it is not a kaprekar number");
+        }
+        
+    }
+}
+
+
+
+*********************************************************************************************************************************
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+    
+    for (int i=0;i<=2;i++){
+        for(int j=0;j<=2;j++){
+            System.out.print("p");
+        }
+        
+        System.out.println();
+    } 
+ 
+    }
+}
+
+
+
+
+
+****************************************************************************************************************************
+Staircase output 
+
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+    int count=1;
+    for (int i=0;i<=3;i++){
+        for(int j=0;j<=i;j++){
+            System.out.print("*");
+           count++; 
+        }
+        
+        
+        System.out.println();
+    } 
+ 
+    }
+}
+
+**********************************************************************************************************************************
+
+Triangle pattern 
+
+public class Main {
+    public static void main(String[] args) {
+        int rows = 5;
+
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 1; j <= rows - i; j++) {
+                System.out.print(" ");
+            }
+
+            for (int k = 1; k <= (2 * i - 1); k++) {
+                System.out.print("*");
+            }
+
+            System.out.println();
+        }
+    }
+}
+
+
+*****************************************************************************************
+right angle triangle 
+
+public class Main {
+    public static void main(String[] args) {
+        int n= 5;
+
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= (n-i); j++) {
+                System.out.print(" ");
+            }
+
+            for (int k = 1; k <= i; k++) {
+                System.out.print("*");
+            }
+
+            System.out.println();
+        }
+    }
+}
+
+
+
+********************************************************************************
+reverse right angle 
+
+public class Main {
+    public static void main(String[] args) {
+        int n= 5;
+
+        for (int i = 0; i <= n; i++) {
+            for (int k = 0; k <= i; k++) {
+                System.out.print(" ");
+            }
+            for (int j = 0; j <= (n-i); j++) {
+                System.out.print("*");
+            }
+
+            
+
+            System.out.println();
+        }
+    }
+}
+
+
+**********************************************************************
+square matrix pattern
+
+public class Main {
+    public static void main(String[] args) {
+        int size = 4;
+
+        for (int i = 0; i <size; i++) {          
+            for (int j = 0; j < size; j++) {      
+            
+                if (i == 0 || i == size - 1 || j == 0 || j == size - 1) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  "); 
+                }
+            }
+            System.out.println();
+        }
+    }
+}
+
+**********************************************************************************************
+arrays even numbers 
+
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = new int[10]; 
+
+        int index = 0;
+        for (int i = 2; i <= 20; i += 2) {
+            arr[index] = i;
+            index++;
+        }
+
+        
+        System.out.println("Even numbers between 1 and 20:");
+        for (int num : arr) {
+            System.out.print(num + " ");
+        }
+    }
+}
+**********************************************************************************************************
+arrays are equal or not 
+
+
+import java.util.Arrays;
+
+public class CompareArrays {
+    public static void main(String[] args) {
+        int[] array1 = {1, 2, 3, 4};
+        int[] array2 = {1, 2, 3, 4};
+
+        // Check if arrays are equal using Arrays.equals()
+        if (Arrays.equals(array1, array2)) {
+            System.out.println("The arrays are the same.");
+        } else {
+            System.out.println("The arrays are different.");
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
