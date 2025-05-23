@@ -1,15 +1,20 @@
+import java.util.Scanner;
 public class maxelerow {
     public static void main(String[] args) {
-        int[][] matrix = {
-                {5, 1, 9},
-                {3, 7, 2},
-                {8, 6, 4}
-        };
-        for (int i = 0; i < matrix.length; i++) {
-            int max = matrix[i][0];
-            for (int j = 1; j < matrix[i].length; j++) {
-                if (matrix[i][j] > max) {
-                    max = matrix[i][j];
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int m = sc.nextInt();
+        int [][] arr = new int[n][m];
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                arr[i][j] = sc.nextInt();
+            }
+        }
+        for (int i = 0; i < arr.length; i++) {
+            int max = arr[i][0];
+            for (int j = 1; j < arr[i].length; j++) {
+                if (arr[i][j] > max) {
+                    max = arr[i][j];
                 }
             }
             System.out.println("Max element in row " + (i + 1) + " is: " + max);
